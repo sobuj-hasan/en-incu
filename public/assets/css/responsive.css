@@ -1,0 +1,285 @@
+/* Medium Layout: 1280px. */
+@media only screen and (min-width: 991px) and (max-width: 1199px) {
+    .menubar ul li {
+        padding: 21px 10px;
+    }
+
+    .explore-part .content .image-overlay .buttons {
+        margin-top: 125px;
+    }
+
+    .shop-part .content .image-overlay .buttons {
+        margin-top: 125px;
+    }
+}
+
+
+/* Tablet Layout: 768px. */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    #inner-media .full-contents {
+        margin-top: -175px;
+    }
+
+    .content-img{
+        display: none;
+    }
+
+    .shop-part .content .image-overlay .buttons button {
+        width: 35px;
+        height: 35px;
+    }
+
+    .shop-part .content .image-overlay .buttons {
+        margin-top: 85px;
+    }
+
+    .shop-part .content h4 {
+        font-size: 18px;
+    }
+
+    .shop-part .content h5 {
+        font-size: 18px;
+    }
+
+    .category-bg .with-arrow .drop-down {
+        left: 156px;
+    }
+
+    .shop-part .slider-item .image-overlay .buttons {
+        margin-top: 100px;
+    }
+}
+
+
+/* Mobile Layout: 320px. */
+
+@media only screen and (max-width: 767px) {
+    .banner-part .content h2 {
+        font-size: 35px;
+    }
+
+    .content-img{
+        display: none;
+    }
+
+    .banner-part .content h1 {
+        font-size: 60px;
+    }
+
+    .banner-part .content p {
+        font-size: 20px;
+    }
+
+    .banner-part .content a {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 30px;
+        line-height: 30px;
+        color: var(--hc);
+        /* font-weight: 600; */
+    }
+
+    .about-part .content h2 {
+        line-height: 13px;
+    }
+
+    #inner-media .full-contents {
+        margin-top: -180px;
+    }
+
+    .media-centers .content h2 {
+        line-height: 30px;
+    }
+
+    .explore-part .content h4 {
+        font-size: 18px;
+    }
+
+    .explore-part .content h5 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .training-part .content h2 {
+        font-size: 30px;
+        line-height: 63px;
+        color: var(--hc);
+    }
+
+    .training-part .content p {
+        margin: 0px;
+    }
+
+    h4 {
+        font-size: 17px;
+    }
+
+    .address .contact button {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 20px;
+        padding: 11px 31px;
+    }
+
+    .professionalism-page .section-content h2 {
+        font-size: 30px;
+    }
+
+    .professionalism-page .section-content h5 {
+        font-size: 18px;
+    }
+
+    .shop-part .slider-item .image-overlay .buttons {
+        margin-top: 100px;
+    }
+
+}
+
+
+/* Wide Mobile Layout: 480px. */
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .shop-part .slider-item .image-overlay .buttons {
+        margin-top: 100px;
+    }
+
+    .arrival-photo {
+        display: none;
+    }
+
+}
+
+
+@media only screen and (max-width: 576px) {
+    .banner-part {
+        height: 270px;
+    }
+
+    .content-img{
+        display: none;
+    }
+
+    .banner-part .content h2 {
+        line-height: 15px;
+    }
+
+    .banner-part .content h1 {
+        font-size: 35px;
+    }
+
+    .banner-part .content h2 {
+        font-size: 22px;
+    }
+
+    .banner-part .content h1 {
+        line-height: 50px;
+    }
+
+    .banner-part .content p {
+        font-size: 16px;
+    }
+
+    .banner-part .content p {
+        line-height: 25px;
+    }
+
+    .banner-part .banner-overlay {
+        height: 270px;
+    }
+
+    .header-top .menubar ul li {
+        padding: 3px;
+    }
+
+    #inner-media .full-contents h4 {
+        margin-top: 15px;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .professionalism-page .section-content h2 {
+        font-size: 25px;
+    }
+
+    .professionalism-page .section-content h5 {
+        font-size: 16px;
+    }
+
+    .training-page h5 {
+        font-size: 16px;
+    }
+
+    .training-page h5 {
+        font-size: 22px;
+        line-height: 20px;
+    }
+
+    .shop-part .slider-item .image-overlay .buttons {
+        margin-top: 135px;
+    }
+
+    .category-bg li:first-child span {
+        font-size: 20px;
+        line-height: 10px;
+    }
+
+    .category-bg li a, .category-bg li span {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 30px;
+    }
+
+    .arrival-photo {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    #inner-media .full-contents {
+        margin-top: -130px;
+    }
+
+    .banner-part .banner-overlay {
+        height: 270px;
+    }
+
+    .content-img{
+        display: none;
+    }
+
+    .blog-post .content h6 {
+        font-size: 16px;
+        line-height: 25px;
+        color: var(--hc);
+    }
+
+    p {
+        line-height: 19px;
+        font-size: 13px;
+    }
+
+    #footer-top .subscribe button {
+        font-size: 14px;
+    }
+
+    #footer-top .subscribe h2 {
+        line-height: 40px;
+        margin-top: 15px;
+    }
+
+    .shop-part .slider-item .image-overlay .buttons {
+        margin-top: 100px;
+    }
+
+    .arrival-photo {
+        margin-top: 0px;
+    }
+
+}

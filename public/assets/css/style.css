@@ -1,0 +1,1531 @@
+/* Defult CSS */
+@import "default.css";
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Typograpgy */
+
+body {
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fjalla);
+    /* font-weight: 600; */
+}
+
+h2 {
+    font-size: 50px;
+    line-height: 70px;
+    color: var(--hc);
+    /* font-weight: 600; */
+}
+
+p {
+    color: var(--tc);
+    line-height: 24px;
+    font-size: 16px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+.small-line {
+    width: 50px;
+    height: 1px;
+    display: inline-block;
+    background-color: #444444;
+}
+
+.big-line {
+    width: 437px;
+    height: 1px;
+    display: inline-block;
+    background-color: #CCCCCC;
+}
+
+/* Header top start */
+header {
+    height: 80px;
+    background: #ffffff;
+    transition: .4s;
+}
+
+.header-top {
+    background: #2F0745;
+}
+
+.header-top .menubar ul li a {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.header-top .menubar ul li span {
+    color: #FFFFFF;
+    font-size: 15px;
+}
+
+.header-top .menubar ul li {
+    padding: 4px;
+}
+
+.header-top li a i {
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #182861;
+    border-radius: 50%;
+    background: var(--wc);
+    display: inline-block;
+    transition: all 0.2s ease 0s;
+}
+
+.header-top a i:hover {
+    background: var(--pc);
+    color: var(--wc);
+    border: 1px solid var(--wc);
+}
+
+/* Header top end */
+
+/* header part start */
+
+.logo img {
+    max-width: 235px;
+}
+
+.logo i {
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.menubar {
+    text-align: right;
+}
+
+.menubar ul {
+    padding: 10px 0;
+    margin: 0;
+}
+
+.menubar ul li {
+    display: inline-block;
+    padding: 8px 14px;
+}
+
+.menubar ul li:last-child {
+    display: inline-block;
+    padding-left: 0;
+}
+
+.menubar ul li a {
+    color: #555555;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    position: relative;
+}
+
+/* header part end */
+
+/* Banner part start */
+
+.banner-part {
+    background: url(../img/photos/banner-bg.png);
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    color: #fff;
+    position: relative;
+}
+.banner-part .banner-overlay {
+    background: #eabc4d47;
+    height: 400px;
+}
+.banner-part .content {
+    position: absolute;
+    top: 50%;
+    color: #ffffff;
+    transform: translateY(-50%);
+}
+
+.banner-part .content h2 {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #1A0327;
+}
+
+.banner-part .content h1 {
+    font-size: 80px;
+    line-height: 100px;
+    color: #B168DB;
+}
+
+.banner-part .content p {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #ffffff;
+}
+
+.banner-part .content a {
+    background: #1A0327;
+    font-weight: 600;
+    font-size: 24px;
+    padding: 12px 50px;
+    line-height: 36px;
+    color: #ffffff;
+}
+
+/* Banner part end */
+
+/* About part start */
+
+.about-part .content h2 {
+    line-height: 63px;
+}
+
+.about-part .content p {
+    font-size: 16px;
+    line-height: 28px;
+    margin: 30px 0px;
+}
+
+/* About part end */
+
+ /* Media Centers Start */
+
+.media-centers {
+    background: url(../img/photos/media-bg.png);
+    background-size: cover;
+    background-position: center;
+    height: 550px;
+}
+
+.media-centers .content h2 {
+    line-height: 63px;
+    color: #FFFFFF;
+}
+
+.media-centers .content p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+ /* Media Centers end  */
+
+/* Inner media start */
+
+#inner-media .full-contents {
+    margin-top: -250px;
+    background: var(--wc);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+#inner-media .full-contents h4 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+
+#inner-media .full-contents p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+
+#inner-media.management-page {
+    background: #FFFFFF;
+}
+
+/* Inner media end */
+
+/* Events part start */
+
+.events-part .content h2 {
+    line-height: 63px;
+}
+
+.events-part .content p {
+    font-size: 16px;
+    line-height: 28px;
+}
+
+/* Events part end */
+
+/* Explore part start */
+
+.explore-part {
+    background: #F2F2F2;
+}
+
+.explore-part h2 {
+    line-height: 63px;
+    color: var(--hc);
+}
+
+.explore-part p {
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--tc);
+}
+
+.explore-part .content h4 {
+    margin-top: 20px;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--hc);
+}
+
+.explore-part .content h5 {
+    font-size: 24px;
+    line-height: 28px;
+    color: #777777;
+}
+
+.explore-part .content .image-design {
+    position: relative;
+}
+
+.explore-part .content .image {
+    width: 100%;
+    display: block;
+}
+
+.explore-part .content .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: .3s ease;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+}
+
+.explore-part .content .image-overlay:hover {
+    opacity: 1;
+}
+
+.explore-part .content .image-overlay:hover {
+    opacity: 1;
+}
+
+.explore-part .content .image-overlay .buttons {
+    margin-top: 155px;
+}
+
+.explore-part .content .image-overlay .buttons button {
+    border: none;
+    background: #FFFFFF;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Explore part end */
+
+/* Training part start */
+
+.training-part .content h2 {
+    font-size: 50px;
+    line-height: 63px;
+    color: var(--hc);
+}
+
+.training-part .content p {
+    font-size: 16px;
+    line-height: 28px;
+    color: var(--tc);
+    margin: 30px 0;
+    margin-bottom: 40px;
+}
+
+/* Training part end */
+
+/* first delivery part start */
+.first-delivery-part{
+    background: var(--mgc);
+}
+.first-delivery-part .span{
+    color: #4a148c;
+}
+/* first delivery part end */
+
+/* Footer top part start */
+
+#footer-top {
+    background: #000833;
+    color: #ffffff;
+}
+
+#footer-top h5 {
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    line-height: 27px;
+}
+
+#footer-top .info h5 {
+    margin-top: 0px;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    line-height: 30px;
+}
+
+#footer-top ul {
+    margin: 0;
+    padding: 0;
+    margin-top: 21px;
+}
+
+#footer-top .menubar li {
+    display: inline-block;
+    padding: 3px;
+    list-style-type: none;
+}
+
+#footer-top .menubar li a {
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+#footer-top .menubar li a i {
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 12px;
+    color: #182861;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    display: inline-block;
+    -webkit-transition: .2s;
+    transition: .2s;
+    background: #FAFAFA;
+}
+
+#footer-top .menubar li span {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+#footer-top .menubar a i:hover {
+    background: #ffffff;
+    color: var(--pc);
+}
+
+#footer-top .footer-content-2 h5 {
+    position: relative;
+}
+
+#footer-top .footer-content-2 h5::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    width: 22px;
+    height: 1px;
+    background: #ffffff;
+}
+
+#footer-top .subscribe h2 {
+    line-height: 63px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+#footer-top .subscribe p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+#footer-top .subscribe input {
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+    background: #000833;
+    outline: none;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 0;
+}
+
+#footer-top .subscribe button {
+    color: #555555;
+    background: #FFFFFF;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    border-radius: 0;
+}
+
+#footer-top .subscribe .menubar {
+    text-align: center;
+}
+
+#footer-top .subscribe input:focus {
+    outline: none;
+}
+
+.footer-content-2 .content li {
+    display: block;
+    padding: 0 0 10px 0px;
+}
+
+input:hover, 
+input:hover 
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+
+.footer-content-2 .content li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+/* Footer-top end */
+
+/* Footer part start */
+footer {
+    background: #00041C;
+}
+
+footer p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #FFFFFF;
+    line-height: 24px;
+    text-align: center;
+}
+/* Footer part end */
+
+/* Administration page start */
+
+.management-page {
+    background: #F2F2F2;
+}
+
+.management-page img {
+    max-height: 400px;
+}
+
+.management-page .section-heading {
+    line-height: 28px;
+}
+
+.management-page .label img {
+    width: 50px;
+}
+
+.management-page .content {
+    position: relative;
+    margin-left: 38px;
+}
+
+.management-page .content img {
+    position: absolute;
+    top: 5px;
+    left: -35px;
+    width: 17px;
+}
+
+.management-page .content span {
+    padding-left: 20px;
+}
+
+/* Administration page end */
+
+/* Trainging page start */
+
+.training-page h5 {
+    font-size: 30px;
+    line-height: 50px;
+    color: var(--hc);
+}
+
+/* Trainging page end */
+
+/* Sports investment start */
+
+.sports-investment .invest-col-bg {
+    background: url('../img/photos/finance-page1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 270px;
+}
+
+.sports-investment .uppper-content p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+.finance-page .sports-investment {
+    background: #F2F2F2;
+}
+
+.finance-page .management-page {
+    background: #ffffff;
+}
+
+.sports-investment .content {
+    position: relative;
+    margin-left: 38px;
+}
+
+.sports-investment .content img {
+    position: absolute;
+    top: 5px;
+    left: -35px;
+    width: 17px;
+}
+
+
+/* Sports investment end */
+
+/* professionalism page start */
+
+.professionalism-page .section-content h2 {
+    font-size: 42px;
+}
+
+.professionalism-page .section-content h5 {
+    font-size: 30px;
+}
+
+/* professionalism page end */
+
+/* About page start */
+
+.about-contact {
+    background: var(--wc);
+}
+
+.about-contact .content h5 {
+    font-size: 16px;
+    line-height: 20px;
+    color: #333333;
+    font-weight: 600;
+}
+
+.about-contact .content h2 {
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+.about-purple {
+    background: #4A148C;
+}
+
+.about-purple p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+/* About page end */
+
+/* Contact page start */
+
+.address .section-content h3 {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 38px;
+    color: #333333;
+    border-bottom: 1px solid #CCCCCC;
+    padding-bottom: 10px;
+}
+
+.address .section-content p {
+    color: #333333;
+}
+
+.address .contact {
+    background: #FFFFFF;
+    box-shadow: 10px 10px 20px -7px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.address .contact button {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    color: #FFFFFF;
+    background: #6B438A;
+    border-radius: 7px;
+    border: none;
+    padding: 13px 35px;
+    margin-top: 30px;
+}
+
+.form-control {
+    border: 1px solid #333333;
+    box-sizing: border-box;
+    border-radius: 7px;
+}
+
+/* Contact page end */
+
+/* Map start */
+
+.map h4 {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #6B438A;
+}
+
+/* Map end */
+
+/* Shop page start */
+
+/* ################################### */
+/* ########## Sidebar start ########## */
+/* ################################### */
+
+.category-bg {
+    background: #F2F2F2;
+    border-radius: 5px;
+    padding: 0;
+}
+
+.category-bg li:first-child {
+    background: #4A148C;
+    padding: 20px 0px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.category-bg li:first-child span {
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.category-bg li a,
+.category-bg li span {
+    padding: 5px 20px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+    color: #444444;
+}
+
+.category-bg .with-arrow {
+    position: relative;
+    cursor: pointer;
+}
+
+.category-bg .with-arrow img {
+    position: absolute;
+    top: 10px;
+    right: 13px;
+    width: 7px;
+}
+
+.category-bg .with-arrow .drop-down {
+    opacity: 0;
+    position: absolute;
+    left: 165px;
+    top: -7px;
+    background: #F2F2F2;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    z-index: 100;
+}
+
+.category-bg .with-arrow .drop-down li a {
+    padding: 0px 20px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #444444;
+}
+
+.category-bg li .drop-down li:first-child {
+    background: none;
+    padding: 10px 15px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.category-bg li .drop-down li {
+    background: none;
+    padding: 10px 15px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.category-bg .with-arrow:hover .drop-down  {
+    opacity: 1;
+}
+
+/* ################################### */
+/* ########### Sidebar end ########### */
+/* ################################### */
+
+.shop-part button {
+    border: none;
+    color: #ffffff;
+    background: #4A148C;
+    padding: 3px 10px;
+}
+
+.shop-part button span {
+    font-size: 20px;
+    margin-top: 3px;
+    display: inline-block;
+    font-family: var(--fjalla);
+}
+
+.shop-part .section-heading {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 38px;
+    color: #444444;
+}
+
+.shop-part .slider-item {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.shop-part .slider-item .product-img {
+    max-height: 250px;
+}
+
+.shop-part .slider-item h4 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #444444;
+    margin-top: 15px;
+}
+
+.shop-part .slider-item h5 {
+    font-size: 20px;
+    line-height: 25px;
+    color: #FF5C00;
+}
+
+.shop-part .product-img  {
+    background: #F2F2F2;
+    border-radius: 3px;
+    width: 94%;
+
+}
+
+.shop-part .shop-product-img {
+    background: #F2F2F2;
+    width: 94%;
+    border-radius: 3px;
+}
+
+/* Shop home page style */
+
+
+
+/* Shop home page style */
+
+/* Shop page end */
+
+/* shop details part start */
+
+.shop-details-part {
+    background: #F2F2F2;
+}
+
+.shop-details-part p a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #444444;
+}
+
+.shop-details-part .img-bg {
+    background: #FFFFFF;
+}
+
+.shop-details-part img {
+    height: 400px;
+}
+
+.shop-details-part .content h3 {
+    font-size: 30px;
+    line-height: 45px;
+    color: #444444;
+}
+
+.shop-details-part .content p {
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.shop-details-part .content h5 {
+    font-size: 20px;
+    line-height: 25px;
+    text-decoration-line: line-through;
+    color: #CCCCCC;
+}
+
+.shop-details-part .quantity input {
+    width: 70px;
+    height: 48px;
+    padding-left: 30px;
+    border: 1px solid #CCCCCC;
+    border-right: none;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.shop-details-part .quantity input:focus {
+    outline: none;
+    border: 1px solid #CCCCCC;
+}
+
+.shop-details-part  .arrows {
+    border: 1px solid #CCCCCC;
+    width: 35px;
+    background: #FFFFFF;
+}
+
+.shop-details-part .quantity .up-arrow {
+    background: #FFFFFF;
+    margin-top: 2px;
+}
+
+.shop-details-part .quantity .up-arrow img, 
+.shop-details-part .quantity .down-arrow img {
+    margin-left: 5px;
+    margin-top: 2px;
+    opacity: .6;
+    cursor: pointer;
+}
+
+.shop-details-part .quantity .line {
+    background: #CCCCCC;
+    height: 1px;
+    width: 25px;
+}
+
+
+.shop-details-part .quantity .down-arrow {
+    background: #FFFFFF;
+    margin-top: 2px;
+}
+
+.shop-details-part .quantity img {
+    height: 8px;
+    width: 16px;
+    margin-bottom: 5px;
+}
+
+.shop-details-part .social-share {
+    display: flex;
+    margin-top: 10px;
+    flex-wrap: nowrap;
+}
+
+.shop-details-part .social-share li {
+    list-style-type: none;
+    margin: 0 7px;
+}
+
+.shop-details-part .social-share li a {
+    height: 25px;
+    width: 25px;
+    line-height: 27px;
+    text-align: center;
+    font-size: 12px;
+    color: #FFFFFF;
+    border-radius: 50%;
+    background: #444444;
+    display: inline-block;
+    transition: all 0.2s ease 0s;
+    -webkit-transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+}
+
+/* Tabs part start */
+
+.tabs-nav {
+    margin-bottom: 15px;
+}
+
+.tabs-nav li {
+    display: inline-block;
+    color: #fefefe;
+    margin-right: 5px;
+}
+
+.tabs-nav a {
+    display: block;
+    padding: 10px 15px;
+    color: #666666;
+}
+
+.tabs-nav a:first-child {
+    padding-left: 0px;
+}
+/* Active tab */
+
+.tabs-nav li.active {
+    color: #000;
+}
+
+.tabs-nav li.active a {
+    font-weight: 600;
+    color: #444444;
+}
+  /* Tab content */
+  
+.tabs-content {
+    padding: 10px;
+    background: #FFF;
+    margin-top: -1px;
+    overflow: hidden;
+}
+  
+  /* Hide all but first content div */
+  
+.tabs-content div:not(:first-child) {
+    display: none;
+}
+
+.tabs-content p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #666666;
+}
+
+.single-tab-content {
+    padding: 20px;
+}
+
+/* Tabs part end */
+
+
+/* shop details part end */
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* Shop details hover design part start */
+
+.shop-part .slider-item .image-design {
+    position: relative;
+}
+
+.shop-part .slider-item .image {
+    /* width: 100%; */
+    display: block;
+}
+
+.shop-part .slider-item .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 94%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: .3s ease;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+}
+
+.shop-part .slider-item .image-overlay:hover {
+    opacity: 1;
+}
+
+.shop-part .slider-item .image-overlay:hover {
+    opacity: 1;
+}
+
+.shop-part .slider-item .image-overlay .buttons {
+    margin-top: 155px;
+}
+
+.shop-part .slider-item .image-overlay .buttons button {
+    border: none;
+    background: #FFFFFF;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Shop details hover design part end */
+
+/* Administration Page CSS START */
+.administration .content h2 {
+    font-size: 42px;
+    line-height: 52px;
+}
+
+.entertainment-facilities{
+    background: var(--wc);
+}
+hr.facilities{
+    background: #CCCCCC;
+    height: 2px;
+}
+
+/* Administration Page CSS END */
+
+
+
+/* Cart page start */
+
+.cart-page {
+    background: var(--gc);
+}
+
+.cart-page .cart-bg {
+    background: #ffffff;
+}
+
+.cart-page h5 {
+    background: var(--gc);
+    color: var(--hc);
+}
+
+.cart-page table th {
+    color: var(--hc);
+}
+
+
+.cart-page table .btn-group-sm>.btn,
+.btn-sm {
+    padding: 0 0.25rem;
+}
+
+.cart-page .value-button {
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 4px 0;
+    background: #eee;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.cart-page .value-button:hover {
+    cursor: pointer;
+}
+
+.cart-page #decrease {
+    margin-right: -4px;
+    border-radius: 8px 0 0 8px;
+}
+
+.cart-page #increase {
+    margin-left: -4px;
+    border-radius: 0 8px 8px 0;
+}
+
+.cart-page input#quantity {
+    text-align: center;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 30px;
+}
+
+.cart-page input[type=number]::-webkit-inner-spin-button,
+.cart-page input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.cart-page .breab a,
+.cart-page .breab span {
+    font-size: 18px;
+}
+
+/* Cart page end */
+
+/*registration start*/
+
+#registration-section {
+    background: #F2F2F2;
+}
+
+.field-icon {
+    float: right;
+    color: #787878;
+    margin-top: -30px;
+    height: 22px;
+    width: 22px;
+    position: relative;
+    z-index: 2;
+    right: 10px;
+    top: 4px;
+}
+
+#registration-section .sign-up {
+    background: #FFFFFF;
+    box-shadow: 6px 32px 34px 1px rgba(0, 0, 0, 0.12);
+    border-radius: 7px;
+}
+
+#registration-section .sign-up h2 {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 50px;
+    color: var(--hc);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 63px;
+    letter-spacing: 0em;
+    margin-bottom: 20px;
+}
+
+#registration-section .sign-up button {
+    background: var(--pc);
+    width: 100%;
+    color: #FFFFFF;
+}
+
+#registration-section .sign-up .first-para {
+    color: #555555;
+    margin-top: 5px;
+    position: relative;
+}
+
+#registration-section .sign-up .second-para {
+    color: #787878;
+    margin-top: 5px;
+}
+
+#registration-section .sign-up .second-para a {
+    color: #787878;
+}
+
+/* #################################### */
+/* Shop details hover design part end */
+/* #################################### */
+
+
+
+/* The Overlay (background) */
+
+/* Chackout page start */
+
+.payment-option {
+    padding: 25px 15px;
+}
+
+/* Chackout page end */
+
+/* New arrival part start */
+
+.arrival-photo{
+    margin-top: 100px;
+}
+.arrival-photo .visit-link{
+    width: 100%;
+    text-align: center;
+    border: 2px solid #FF5C00;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+.arrival-photo .visit-link a{
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #000000;
+}
+
+/* The Overlay (background) */
+
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    /* Black fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/opacity */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+
+.overlay-content {
+    position: relative;
+    top: 10%;
+    /* 25% from the top */
+    width: 100%;
+    /* 100% width */
+    text-align: center;
+    /* Centered text/links */
+    margin-top: 30px;
+    /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+
+.overlay a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 26px;
+    color: #dadada;
+    display: block;
+    /* Display block instead of inline */
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* LOGIN PAGE CSS START */
+.login {
+    background: #fdfdfd;
+    border-radius: 7px;
+    box-shadow: 4px 4px 10px 0px #00000033;
+}
+
+.login-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 22px;
+}
+
+.vendor-signup .login-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.login-section h4 {
+    font-weight: 600;
+    color: var(--bc);
+}
+
+.login-section p {
+    font-weight: 400;
+    color: var(--bc);
+}
+
+.login-section .form-control {
+    border: 1px solid #CCCCCC;
+    background: #f4f4f4;
+    height: 50px;
+    box-shadow: none !important;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--xgc);
+    padding-left: 12%;
+}
+
+.login-section input::placeholder {
+    font-weight: 500;
+    font-size: 16px;
+    color: #B0B0B0;
+    line-height: 19px;
+    padding-left: 0%;
+}
+
+.vendor-signup .form-control {
+    border: 1px solid #CCCCCC;
+    background: #f4f4f4;
+    height: 50px;
+    box-shadow: none !important;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--xgc);
+    padding-left: 4%;
+}
+
+.login-section .login {
+    position: relative;
+}
+
+.login-section .login img {
+    position: absolute;
+    top: 13px;
+    left: 7px;
+}
+
+.login-section label {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--xgc);
+    line-height: 19px;
+}
+
+.login-section p {
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--xgc);
+    line-height: 19px;
+}
+
+.login-section .text-form {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--xgc);
+    line-height: 19px;
+}
+
+.login-section button {
+    background: #000833;
+    border: none;
+    height: 50px;
+    border-radius: 7px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    color: var(--wc);
+}
+
+.login-section a {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--xgc);
+}
+
+/* register section */
+.register-section {
+    background-image: url(../img/photos/sign-up.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.register-section h4 {
+    font-weight: 600;
+    color: var(--wc);
+    padding-top: 82%;
+}
+
+.sign-up-btn {
+    width: 85%;
+    background: var(--cc);
+    margin-left: 8%;
+}
+
+.sign-up-btn li {
+    margin: 15px 4px;
+}
+
+.sign-up-btn li a i {
+    padding: 8px 10px;
+    font-size: 16px;
+    border: 1px solid var(--bc);
+    color: var(--bc);
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+.sign-up-btn li a i:hover {
+    background: var(--bc);
+    border: 1px solid var(--bc);
+    color: var(--wc);
+}
+
+.sign-up-page .register-section h4 {
+    padding-top: 123%;
+}
+
+/* LOGIN PAGE CSS END */
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+
+
+
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
