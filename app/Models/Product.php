@@ -11,29 +11,24 @@ class Product extends Model
     use HasFactory, FileUploadHelper;
 
     protected $fillable = [
-        'restaurant_id',
+        'user_id',
         'category_id',
         'name',
         'slug',
         'price',
-        'image',
+        'sell_price',
         'stock',
-        'description',
-        'user_id',
         'image',
+        'short_description',
+        'long_description',
         'status',
     ];
 
-    protected $with = ['category', 'user', 'multipleimage', 'restaurant'];
+    protected $with = ['category', 'user', 'multipleimage'];
 
     public function category()
     {
         return $this->belongsTo(Category::class);
-    }
-
-    public function restaurant()
-    {
-        return $this->belongsTo(Restaurant::class);
     }
 
     public function user()

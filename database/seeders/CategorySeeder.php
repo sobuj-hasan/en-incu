@@ -15,12 +15,12 @@ class CategorySeeder extends Seeder
     public function run()
     {
         Category::create([
-            'name' => 'Best Food',
-            'ar_name' => 'أفضل طعام',
+            'name' => 'Exhebition Entertainment',
+            'ar_name' => 'ترفيه المعرض',
         ]);
         Category::create([
-            'name' => 'New Taste',
-            'ar_name' => 'طعم جديد',
+            'name' => 'Live Entertainment',
+            'ar_name' => 'فعاليات ترفهيه حية',
         ]);
     }
 }

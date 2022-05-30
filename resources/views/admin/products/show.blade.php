@@ -28,20 +28,32 @@
                                 <td>{{ $product->name }}</td>
                             </tr>
                             <tr>
+                                <th>User Name</th>
+                                <td>{{ $product->user->name }}</td>
+                            </tr>
+                            <tr>
                                 <th>Category</th>
                                 <td>{{ $product->category->name }}</td>
                             </tr>
                             <tr>
-                                <th>Price</th>
+                                <th>Old Price</th>
                                 <td>{{ $product->price }} SAR</td>
                             </tr>
                             <tr>
+                                <th>Sell/Offer Price</th>
+                                <td>{{ $product->sell_price }} SAR</td>
+                            </tr>
+                            <tr>
                                 <th>Available Stock</th>
-                                <td>{{ $product->stock }}</td>
+                                <td>{{ $product->stock }} Piece</td>
                             </tr>
                             <tr>
                                 <th>Short Description</th>
-                                <td>{{ $product->description }}</td>
+                                <td>{{ $product->short_description }}</td>
+                            </tr>
+                            <tr>
+                                <th>Full Description</th>
+                                <td>{!! $product->long_description !!}</td>
                             </tr>
                             <tr>
                                 <th>Image</th>

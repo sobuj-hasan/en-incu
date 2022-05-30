@@ -29,7 +29,8 @@
                                 <th>Image </th>
                                 <th>Name </th>
                                 <th>Category</th>
-                                <th>Price </th>
+                                <th>Product Price</th>
+                                <th>Sell/Offer Price</th>
                                 <th>Stock Amount </th>
                                 <th>Action </th>
                             </tr>
@@ -44,18 +45,20 @@
                                             <img width="60px" src="{{ $product->urlOf('image') }}" alt="img" title="contact-img"/>
                                         </td>
                                         <td>
-                                            <a href="{{ route('products.show', $product->id) }}">{{ $product->name }}</a>
+                                            <h5><a href="{{ route('products.show', $product->id) }}">{{ $product->name }}</a></h5>
                                         </td>
                                         <td>
-                                            {{ $product->category->name }}
+                                            <h5>{{ $product->category->name }}</h5>
                                         </td>
                                         <td>
-                                            {{ $product->price }}
+                                            <h5>{{ $product->price }} SAR</h5>
                                         </td>
                                         <td>
-                                            {{ $product->stock }}
+                                            <h5>{{ $product->sell_price }} SAR</h5>
                                         </td>
-
+                                        <td>
+                                            <h5>{{ $product->stock }} Piece</h5>
+                                        </td>
                                         <form method="POST" action="{{ route('products.destroy', $product->id) }}">
                                             @csrf
                                             @method('DELETE')
@@ -78,7 +81,7 @@
 @section('footer_script')
     <script>
         function productDelete(){
-            alert('Are you shure ? You want to delete this Category')
+            alert('Are you shure ? You want to delete this Product')
         }
     </script>
 @endsection

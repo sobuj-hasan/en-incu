@@ -51,18 +51,19 @@ class ProductController extends Controller
     {
         $request->validate([
             'category_id' => ['required', 'numeric'],
-            'restaurant_id' => ['required', 'numeric'],
             'name' => ['required', 'string', 'min:3', 'max:255'],
             'price' => ['required', 'string', 'numeric'],
+            'sell_price' => ['required', 'string', 'numeric'],
             'stock' => ['required', 'numeric'],
-            'description' => ['required', 'string' ],
+            'short_description' => ['required', 'string' ],
+            'long_description' => ['required', 'string' ],
+            'status' => ['required'],
             'image' => 'required | mimes:jpg,jpeg,png,gif,svg,webp|max:2000',
         ]);
         $slug = Str::slug($request->name) . '-' . Str::random(5);
         $product = Product::create($request->all() + [
             'user_id' => Auth::id() ?? '',
             'slug' => $slug,
-            'status' => 1,
         ]);
 
         if ($request->hasFile('image')) {
@@ -87,7 +88,7 @@ class ProductController extends Controller
                 }
             }
         }
-        Notify::success('Foods has been added !', 'Success');
+        Notify::success('Product has been added !', 'Success');
         return redirect()->route('products.index');
     }
 
@@ -113,8 +114,7 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         $categories = Category::get();
-        $restaurants = Restaurant::get();
-        return view('admin.products.edit', compact('product', 'categories', 'restaurants'));
+        return view('admin.products.edit', compact('product', 'categories'));
     }
 
     /**
@@ -128,11 +128,13 @@ class ProductController extends Controller
     {
         $request->validate([
             'category_id' => ['required', 'numeric'],
-            'restaurant_id' => ['required', 'numeric'],
             'name' => ['required', 'string', 'min:3', 'max:255'],
             'price' => ['required', 'string', 'numeric'],
+            'sell_price' => ['required', 'string', 'numeric'],
             'stock' => ['required', 'numeric'],
-            'description' => ['required', 'string'],
+            'short_description' => ['required', 'string'],
+            'long_description' => ['required', 'string'],
+            'status' => ['required'],
             'image' => 'mimes:jpg,jpeg,png,gif,svg,webp|max:2000',
         ]);
         $slug = Str::slug($request->name) . '-' . Str::random(5);
@@ -173,7 +175,7 @@ class ProductController extends Controller
                 }
             }
         }
-        Notify::success('Foods has been updated!', 'Success');
+        Notify::success('Product has been updated!', 'Success');
         return redirect(route('products.index'));
     }
 
@@ -185,8 +187,8 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        $product->delete();
-        Notify::error('Foods Deleted', 'Deleted');
+        $product->deleteWith('image');
+        Notify::Success('Product Deleted', 'Deleted');
         return back();
     }
 }
