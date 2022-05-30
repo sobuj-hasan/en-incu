@@ -312,6 +312,10 @@ header {
     display: block;
 }
 
+.explore-part .content .image img{
+    max-height: 270px;
+}
+
 .explore-part .content .image-overlay {
     position: absolute;
     top: 0;

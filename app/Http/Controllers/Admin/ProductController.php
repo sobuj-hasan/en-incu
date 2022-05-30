@@ -25,7 +25,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::latest()->get();
+        $products = Product::latest()->limit(40)->get();
         return view('admin.products.index', compact('products'));
     }
 
@@ -71,22 +71,6 @@ class ProductController extends Controller
             $product->update([
                 'image' => $image_path
             ]);
-        }
-
-        if ($request->hasFile('image_name')) {
-            $flag = 1;
-
-            foreach ($request->file('image_name') as $single_photo) {
-                $image_path = $this->upload($single_photo, "products", $product->id . "-" . $flag++);
-                MultipleImage::create([
-                    'product_id' => $product->id,
-                    'image_name' => $image_path,
-                ]);
-
-                if ($flag == 4) {
-                    break;
-                }
-            }
         }
         Notify::success('Product has been added !', 'Success');
         return redirect()->route('products.index');
@@ -147,33 +131,6 @@ class ProductController extends Controller
             $product->update([
                 'image' => $image_path
             ]);
-        }
-
-        if ($request->hasFile('image_name')) {
-
-            $multiple_images = MultipleImage::where('product_id', $product->id)->get();
-
-            foreach ($multiple_images as $multiple_image) {
-                if ($multiple_image) {
-                    $multiple_image->deleteWith('image_name');
-                }
-            }
-
-            if ($request->hasFile('image_name')) {
-                $flag = 1;
-
-                foreach ($request->file('image_name') as $single_photo) {
-                    $image_path = $this->upload($single_photo, "products", $product->id . "-" . $flag++);
-                    MultipleImage::create([
-                        'product_id' => $product->id,
-                        'image_name' => $image_path,
-                    ]);
-
-                    if ($flag == 4) {
-                        break;
-                    }
-                }
-            }
         }
         Notify::success('Product has been updated!', 'Success');
         return redirect(route('products.index'));

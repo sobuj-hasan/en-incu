@@ -6,13 +6,13 @@
         <div class="container">
             <div class="row clearfix">
                 <div class="col-12">
-                    <p><a href="">Home</a> > <a href="">Top Sell Item</a> > <a href="">Lorem Ipsum Dolor</a> </p>
+                    <p><a href="{{ route('index') }}">Home</a> > <a href="">{{ $product_details->category->name }}</a> > <a href="">{{ $product_details->name }}</a> </p>
                 </div>
             </div>
             <div class="row clearfix">
                 <div class="col-md-5 text-center">
                     <div class="img-bg">
-                        <img src="{{ asset('assets/img/products/19.png') }}" alt="Product image">
+                        <img src="{{ $product_details->urlOf('image') }}" alt="Product image">
                     </div>
                 </div>
                 <div class="col-md-7 ps-3">

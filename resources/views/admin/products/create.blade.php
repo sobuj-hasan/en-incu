@@ -99,16 +99,6 @@
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
-
-                                <div class="col-md-6">
-                                    <label for="field-1" class="control-label">Multiple Images <span class="text-light"></span></label><br>
-                                    <button type="button" class="btn btn-secondary btn-file">
-                                        <input style="width: 100%" type="file" class="btn-secondary" multiple name="image_name[]" class="form-control" />
-                                    </button><br>
-                                    @error('image_name')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
-                                </div>
                                 <div class="col-md-12 mt-3">
                                     <div class="form-group">
                                         <label for="field-1" class="control-label">Short Description</label>

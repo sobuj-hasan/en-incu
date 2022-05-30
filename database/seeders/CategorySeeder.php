@@ -15,6 +15,10 @@ class CategorySeeder extends Seeder
     public function run()
     {
         Category::create([
+            'name' => 'Explore New Products',
+            'ar_name' => 'اكتشف المنتجات الجديدة',
+        ]);
+        Category::create([
             'name' => 'Exhebition Entertainment',
             'ar_name' => 'ترفيه المعرض',
         ]);

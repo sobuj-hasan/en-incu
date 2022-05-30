@@ -97,7 +97,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 align-self-center mt-4 mt-md-0">
-                    <img src="assets/img/photos/event-1.png" alt="Event image">
+                    <img src="{{ asset('assets/img/photos/event-1.png') }}" alt="Event image">
                 </div>
             </div>
         </div>
@@ -116,74 +116,29 @@
             </div>
 
             <div class="row py-4">
-                <div class="col-sm-6 col-md-3 text-center">
-                    <div class="content">
-                        <div class="image-design">
-                            <div class="image">
-                                <img src="assets/img/products/1.jpg" alt="Product image">
-                            </div>
-                            <div class="image-overlay">
-                                <div class="buttons">
-                                    <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                    <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
+                @forelse ($products as $item)
+                    <div class="col-sm-6 col-md-3 text-center">
+                        <div class="content">
+                            <div class="image-design">
+                                <div class="image">
+                                    <img class="w-100" src="{{ $item->urlOf('image') }}" alt="Product image">
+                                </div>
+                                <div class="image-overlay">
+                                    <div class="buttons">
+                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
+                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
+                                    </div>
                                 </div>
                             </div>
+                            <a href="{{ route('product.details', $item->slug) }}">
+                                <h4>{{ $item->name }}</h4>
+                            </a>
+                            <h5>SAR {{ $item->sell_price }}.00</h5>                    
                         </div>
-                        <h4>X-Box Controller</h4>
-                        <h5>$200.00</h5>                        
                     </div>
-                </div>
-                <div class="col-sm-6 col-md-3 text-center">
-                    <div class="content">
-                        <div class="image-design">
-                            <div class="image">
-                                <img src="assets/img/products/2.jpg" alt="Product image">
-                            </div>
-                            <div class="image-overlay">
-                                <div class="buttons">
-                                    <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                    <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                </div>
-                            </div>
-                        </div>
-                        <h4>Customize Sketch Board</h4>
-                        <h5>$200.00</h5>                        
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 text-center">
-                    <div class="content">
-                        <div class="image-design">
-                            <div class="image">
-                                <img src="assets/img/products/3.jpg" alt="Product image">
-                            </div>
-                            <div class="image-overlay">
-                                <div class="buttons">
-                                    <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                    <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                </div>
-                            </div>
-                        </div>
-                        <h4>Ancient Piano</h4>
-                        <h5>$200.00</h5>                        
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3 text-center">
-                    <div class="content">
-                        <div class="image-design">
-                            <div class="image">
-                                <img src="assets/img/products/4.jpg" alt="Product image">
-                            </div>
-                            <div class="image-overlay">
-                                <div class="buttons">
-                                    <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                    <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                </div>
-                            </div>
-                        </div>
-                        <h4>Racing Cycle</h4>
-                        <h5>$200.00</h5>                      
-                    </div>
-                </div>
+                @empty
+                    <h6>Nothing to show any explore products</h6>
+                @endforelse
             </div>
         </div>
     </section>
