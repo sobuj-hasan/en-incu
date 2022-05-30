@@ -215,10 +215,16 @@
                 <div class="col-12 col-sm-12 col-md-6 text-center subscribe align-self-center">
                     <h2>Join with us</h2>
                     <p>Subscribe to receive updates, access to exclusive deals, and more</p>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control">
-                        <button class="btn text-uppercase" type="button">subscribes</button>
-                    </div>
+                    <form method="GET" action="{{ route('subscribe') }}">
+                        @csrf
+                        <div class="input-group mb-3">
+                            <input type="text" name="email" class="form-control" required>
+                            <button class="btn text-uppercase" type="submit">subscribes</button>
+                        </div>
+                        @error('email')
+                            <span class="text-danger"> {{ $message }} </span>
+                        @enderror
+                    </form>
 
                     <div class="menubar clearfix">
                         <ul>

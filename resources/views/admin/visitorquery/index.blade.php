@@ -9,7 +9,7 @@
                     <h4 class="page-title float-left">Visitor Queries</h4>
                     <ol class="breadcrumb float-right">
                         <li class="breadcrumb-item"><a href="">Admin</a></li>
-                        <li class="breadcrumb-item"><a href="#">Queries List</a></li>
+                        <li class="breadcrumb-item"><a href="">Queries List</a></li>
                     </ol>
 
                     <div class="clearfix"></div>
@@ -39,23 +39,23 @@
                                 @foreach ($queries as $query)
                                     <tr>
                                         <td>
-                                            <p>{{ $loop->index + 1 }}</p>
+                                            <h5>{{ $loop->index + 1 }}</h5>
                                         </td>
 
                                         <td>
-                                            <p>{{ $query->name }}</p>
+                                            <h5>{{ $query->name }}</h5>
                                         </td>
 
                                         <td>
-                                            <p>{{ $query->phone }}</p>
+                                            <h5>{{ $query->phone }}</h5>
                                         </td>
 
                                         <td>
-                                            <p>{{ $query->email }}</p>
+                                            <h5>{{ $query->email }}</h5>
                                         </td>
 
                                         <td>
-                                            <p>{{ $query->message }}</p>
+                                            <h5>{{ $query->message }}</h5>
                                         </td>
 
                                         <td>
@@ -65,6 +65,7 @@
                                                 @csrf
                                                 @method('DELETE')
                                                 <td>
+                                                    <a href="mailto:{{ $query->email }}"> <i class="fa-solid fa-paper-plane"></i> </a>
                                                     <button onclick="deleteQuries()" style="border: none; background:none; cursor:pointer;" type="submit" name="submit" class="table-action-btn"><i class="mdi mdi-close"></i></button>
                                                 </td>
                                             </form>

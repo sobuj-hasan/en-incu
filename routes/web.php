@@ -38,6 +38,8 @@ Route::get('administration', [FrontendController::class, 'administration'])->nam
 Route::get('privacy-policy', [FrontendController::class, 'privacy_policy'])->name('privacy.policy');
 Route::get('media-center', [FrontendController::class, 'media_center'])->name('media.center');
 
+Route::get('subscribe', [FrontendController::class, 'subscribe'])->name('subscribe');
+
 Route::get('contact/message', [FrontendController::class, 'contactmessage'])->name('contact.message');
 Route::get('cart', [FrontendController::class, 'cart'])->name('cart');
 Route::get('checkout', [FrontendController::class, 'checkout'])->name('checkout');
