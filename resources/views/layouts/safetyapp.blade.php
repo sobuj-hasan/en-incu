@@ -60,7 +60,7 @@
                             <li class="nav-item me-4">
                                 <a href="#">
                                     Arabic
-                                    <img src="assets/img/photos/language.png" alt="lang">
+                                    <img src="{{ asset('assets/img/photos/language.png') }}" alt="lang">
                                 </a>
                             </li>
                             
@@ -271,11 +271,11 @@
     <!--    boostrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-    <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/mobile-menu.js"></script>
+    <script src="{{ asset('assets/js/slick.min.js') }}"></script>
+    <script src="{{ asset('assets/js/mobile-menu.js') }}"></script>
     <!-- Toastr script CDN -->
     <script src="https://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="{{ asset('assets/js/main.js') }}"></script>
 
     <!-- Toastr Scripts render -->
     {!! Notify::message() !!}

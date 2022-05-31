@@ -18,13 +18,14 @@ class FrontendController extends Controller
 {
     public function index(){
         $data['products'] = Product::where('status', 1)->latest()->limit(4)->get();
+
         return view('index', $data);
     }
 
     public function product_details($slug){
         $data['product_details'] = Product::where('slug', $slug)->firstOrFail();
         // $data['multipleimage'] = MultipleImage::where('product_id', $data['single_food']->id)->get();
-        // $data['related_products'] = Product::where('category_id', $data['single_food']->category_id)->where('id', '!=', $data['single_food']->id)->get();
+        $data['related_products'] = Product::where('category_id', $data['product_details']->category_id)->where('id', '!=', $data['product_details']->id)->get();
         return view('product_details', $data);
     }
 
