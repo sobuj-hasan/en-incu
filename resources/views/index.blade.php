@@ -5,6 +5,45 @@
     @include('safety_components.banner-part')
     <!-- Banner part end -->
 
+    <!-- Explore part start -->
+    <section class="explore-part py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-9 col-md-8 text-center">
+                    <h2>Our Products</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas libero neque at mauris tempus</p>
+                </div>
+            </div>
+
+            <div class="row py-4 explore-course">
+                @forelse ($products as $item)
+                    <div class="col-sm-6 col-md-3 mx-3 text-center slider-item">
+                        <div class="content">
+                            <div class="image-design">
+                                <div class="image">
+                                    <img class="w-100" src="{{ $item->urlOf('image') }}" alt="Product image">
+                                </div>
+                                <div class="image-overlay">
+                                    <div class="buttons">
+                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
+                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="{{ route('product.details', $item->slug) }}">
+                                <h4>{{ $item->name }}</h4>
+                            </a>
+                            <h5>SAR {{ $item->sell_price }}.00</h5>                    
+                        </div>
+                    </div>
+                @empty
+                    <h6>Nothing to show any explore products</h6>
+                @endforelse
+            </div>
+        </div>
+    </section>
+    <!-- Explore part end -->
+
     <!-- about part start -->
     <section class="about-part py-5">
         <div class="container">
@@ -115,9 +154,9 @@
                 </div>
             </div>
 
-            <div class="row py-4">
+            <div class="row py-4 explore-course">
                 @forelse ($products as $item)
-                    <div class="col-sm-6 col-md-3 text-center">
+                    <div class="col-sm-6 col-md-3 mx-3 text-center slider-item">
                         <div class="content">
                             <div class="image-design">
                                 <div class="image">
@@ -257,3 +296,4 @@
     </section>
     <!-- Business brand end -->
 @endsection
+

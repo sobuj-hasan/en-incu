@@ -446,6 +446,56 @@
 
             ]
         });
+
+        // Index page explore course slide
+        $('.explore-course').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            rtl: false,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            arrows: true,
+            // nextArrow: $('#course-next'),
+            // prevArrow: $('#course-previous'),
+            responsive: [{
+                breakpoint: 1300,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            },
+            {
+                breakpoint: 1100,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 350,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }
+
+            ]
+        });
     </script>
 
 </body>

@@ -108,7 +108,7 @@
                     <div class="slider-item">
                         <div class="image-design">
                             <div class="product-img image">
-                                <img src="{{ $item->urlOf('image') }}" alt="Product image">
+                                <img class="w-100" src="{{ $item->urlOf('image') }}" alt="Product image">
                             </div>
                             <div class="image-overlay">
                                 <div class="buttons">

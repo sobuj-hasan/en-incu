@@ -1066,6 +1066,10 @@ input::-webkit-inner-spin-button {
     display: block;
 }
 
+.shop-part .slider-item .image img{
+    max-height: 220px;
+}
+
 .shop-part .slider-item .image-overlay {
     position: absolute;
     top: 0;

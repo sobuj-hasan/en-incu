@@ -14,60 +14,19 @@
                         <li class="top-bg">
                             <span>Category</span>
                         </li>
-                        <li class="mt-2 with-arrow">
-                            <span>Exhibition entertainment <img class="float-right d-inline-block"
-                                    src="assets/img/icon/arrow-right.png" alt="asdf"></span>
-                            <ul class="drop-down">
-                                <li><a href=""> Submenu One </a></li>
-                                <li><a href=""> Submenu Two </a></li>
-                                <li><a href=""> Submenu Three </a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="">Live entertainment</a>
-                        </li>
-                        <li>
-                            <a href="">Mass media entertainment industry</a>
-                        </li>
-                        <li>
-                            <a href="">Digital Entertainment Industry</a>
-                        </li>
-                        <li>
-                            <a href="">Electronic entertainment</a>
-                        </li>
-                        <li>
-                            <a href="">Music industry</a>
-                        </li>
-                        <li>
-                            <a href="">Music industry</a>
-                        </li>
-                        <li>
-                            <a href="">Music industry</a>
-                        </li>
-                        <li>
-                            <a href="">Music industry</a>
-                        </li>
-                        <li>
-                            <a href="">Music industry</a>
-                        </li>
-                        <li>
-                            <a href="">Music industry</a>
-                        </li>
-                        <li>
-                            <a href="">Music industry</a>
-                        </li>
-                        <li>
-                            <a href="">Music industry</a>
-                        </li>
-                        <li>
-                            <a href="">Music industry</a>
-                        </li>
-                        <li>
-                            <a href="">Music industry</a>
-                        </li>
-                        <li>
-                            <a href="">Music industry</a>
-                        </li>
+                        @forelse ($category as $item)
+                            <li class="mt-2 with-arrow">
+                                <span>{{ $item->name }}</span>
+                                {{-- <img class="float-right d-inline-block" src="{{ asset('assets/img/icon/arrow-right.png') }}" alt="right-array"> --}}
+                                {{-- <ul class="drop-down">
+                                    <li><a href=""> Submenu One </a></li>
+                                    <li><a href=""> Submenu Two </a></li>
+                                    <li><a href=""> Submenu Three </a></li>
+                                </ul> --}}
+                            </li>
+                        @empty
+                            <span class="text-danger">Nothing to show any category!</span>
+                        @endforelse
                     </ul>
                 </div>
     
@@ -81,200 +40,28 @@
                             <button class="arrow-btn shop-top-nxt"><span> > </span></button>
                         </div>
                     </div>
-    
                     <div class="product-autoplay-1">
-                        <div class="slider-item">
-                            <div class="image-design">
-                                <div class="product-img image">
-                                    <img src="assets/img/products/11.png" alt="Product image">
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="buttons">
-                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
+                        @forelse ($products as $item)
+                            <div class="slider-item">
+                                <div class="image-design">
+                                    <div class="product-img image">
+                                        <img class="w-100" src="{{ $item->urlOf('image') }}" alt="Product image">
+                                    </div>
+                                    <div class="image-overlay">
+                                        <div class="buttons">
+                                            <button class="me-2"><img src="{{ asset('assets/img/icon/cart.png') }}" alt="cart"></button>
+                                            <button><img src="{{ asset('assets/img/icon/favourite.png') }}" alt="favourite"></button>
+                                        </div>
                                     </div>
                                 </div>
+                                <a href="{{ route('product.details', $item->slug) }}">
+                                    <h4>{{ $item->name }}</h4>
+                                </a>
+                                <h5>SAR {{ $item->sell_price }}</h5>
                             </div>
-    
-                            <h4>Product Name Here</h4>
-                            <h5>$22.54</h5>
-                        </div>
-                        <div class="slider-item">
-                            <div class="image-design">
-                                <div class="product-img image">
-                                    <img src="assets/img/products/12.png" alt="Product image">
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="buttons">
-                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <h4>Product Name Here</h4>
-                            <h5>$22.54</h5>
-                        </div>
-                        <div class="slider-item">
-                            <div class="image-design">
-                                <div class="product-img image">
-                                    <img src="assets/img/products/13.png" alt="Product image">
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="buttons">
-                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <h4>Product Name Here</h4>
-                            <h5>$22.54</h5>
-                        </div>
-                        <div class="slider-item">
-                            <div class="image-design">
-                                <div class="product-img image">
-                                    <img src="assets/img/products/14.png" alt="Product image">
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="buttons">
-                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <h4>Product Name Here</h4>
-                            <h5>$22.54</h5>
-                        </div>
-                        <div class="slider-item">
-                            <div class="image-design">
-                                <div class="product-img image">
-                                    <img src="assets/img/products/15.png" alt="Product image">
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="buttons">
-                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <h4>Product Name Here</h4>
-                            <h5>$22.54</h5>
-                        </div>
-                        <div class="slider-item">
-                            <div class="image-design">
-                                <div class="product-img image">
-                                    <img src="assets/img/products/16.png" alt="Product image">
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="buttons">
-                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <h4>Product Name Here</h4>
-                            <h5>$22.54</h5>
-                        </div>
-                        <div class="slider-item">
-                            <div class="image-design">
-                                <div class="product-img image">
-                                    <img src="assets/img/products/11.png" alt="Product image">
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="buttons">
-                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <h4>Product Name Here</h4>
-                            <h5>$22.54</h5>
-                        </div>
-                        <div class="slider-item">
-                            <div class="image-design">
-                                <div class="product-img image">
-                                    <img src="assets/img/products/12.png" alt="Product image">
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="buttons">
-                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <h4>Product Name Here</h4>
-                            <h5>$22.54</h5>
-                        </div>
-                        <div class="slider-item">
-                            <div class="image-design">
-                                <div class="product-img image">
-                                    <img src="assets/img/products/13.png" alt="Product image">
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="buttons">
-                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <h4>Product Name Here</h4>
-                            <h5>$22.54</h5>
-                        </div>
-                        <div class="slider-item">
-                            <div class="image-design">
-                                <div class="product-img image">
-                                    <img src="assets/img/products/14.png" alt="Product image">
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="buttons">
-                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <h4>Product Name Here</h4>
-                            <h5>$22.54</h5>
-                        </div>
-                        <div class="slider-item">
-                            <div class="image-design">
-                                <div class="product-img image">
-                                    <img src="assets/img/products/15.png" alt="Product image">
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="buttons">
-                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <h4>Product Name Here</h4>
-                            <h5>$22.54</h5>
-                        </div>
-                        <div class="slider-item">
-                            <div class="image-design">
-                                <div class="product-img image">
-                                    <img src="assets/img/products/16.png" alt="Product image">
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="buttons">
-                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <h4>Product Name Here</h4>
-                            <h5>$22.54</h5>
-                        </div>
+                        @empty
+                            <h6 class="text-danger">Nothing to show any products !</h6>
+                        @endforelse
                     </div>
                 </div>
             </div>
@@ -304,198 +91,27 @@
                         </div>
                     </div>
                     <div class="product-autoplay-2">
-                        <div class="slider-item">
-                            <div class="image-design">
-                                <div class="product-img image">
-                                    <img src="assets/img/products/5.png" alt="Product image">
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="buttons">
-                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
+                        @forelse ($new_arrivals as $item)
+                            <div class="slider-item">
+                                <div class="image-design">
+                                    <div class="product-img image">
+                                        <img class="w-100" src="{{ $item->urlOf('image') }}" alt="Product image">
+                                    </div>
+                                    <div class="image-overlay">
+                                        <div class="buttons">
+                                            <button class="me-2"><img src="{{ asset('assets/img/icon/cart.png') }}" alt="cart"></button>
+                                            <button><img src="{{ asset('assets/img/icon/favourite.png') }}" alt="favourite"></button>
+                                        </div>
                                     </div>
                                 </div>
+                                <a href="{{ route('product.details', $item->slug) }}">
+                                    <h4>{{ $item->name }}</h4>
+                                </a>
+                                <h5>SAR {{ $item->sell_price }}</h5>
                             </div>
-    
-                            <h4>Product Name Here</h4>
-                            <h5>$22.54</h5>
-                        </div>
-                        <div class="slider-item">
-                            <div class="image-design">
-                                <div class="product-img image">
-                                    <img src="assets/img/products/6.png" alt="Product image">
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="buttons">
-                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <h4>Product Name Here</h4>
-                            <h5>$22.54</h5>
-                        </div>
-                        <div class="slider-item">
-                            <div class="image-design">
-                                <div class="product-img image">
-                                    <img src="assets/img/products/7.png" alt="Product image">
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="buttons">
-                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <h4>Product Name Here</h4>
-                            <h5>$22.54</h5>
-                        </div>
-                        <div class="slider-item">
-                            <div class="image-design">
-                                <div class="product-img image">
-                                    <img src="assets/img/products/8.png" alt="Product image">
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="buttons">
-                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <h4>Product Name Here</h4>
-                            <h5>$22.54</h5>
-                        </div>
-                        <div class="slider-item">
-                            <div class="image-design">
-                                <div class="product-img image">
-                                    <img src="assets/img/products/9.png" alt="Product image">
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="buttons">
-                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <h4>Product Name Here</h4>
-                            <h5>$22.54</h5>
-                        </div>
-                        <div class="slider-item">
-                            <div class="image-design">
-                                <div class="product-img image">
-                                    <img src="assets/img/products/10.png" alt="Product image">
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="buttons">
-                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <h4>Product Name Here</h4>
-                            <h5>$22.54</h5>
-                        </div>
-                        <div class="slider-item">
-                            <div class="image-design">
-                                <div class="product-img image">
-                                    <img src="assets/img/products/17.png" alt="Product image">
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="buttons">
-                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <h4>Product Name Here</h4>
-                            <h5>$22.54</h5>
-                        </div>
-                        <div class="slider-item">
-                            <div class="image-design">
-                                <div class="product-img image">
-                                    <img src="assets/img/products/18.png" alt="Product image">
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="buttons">
-                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <h4>Product Name Here</h4>
-                            <h5>$22.54</h5>
-                        </div>
-                        <div class="slider-item">
-                            <div class="image-design">
-                                <div class="product-img image">
-                                    <img src="assets/img/products/5.png" alt="Product image">
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="buttons">
-                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <h4>Product Name Here</h4>
-                            <h5>$22.54</h5>
-                        </div>
-                        <div class="slider-item">
-                            <div class="image-design">
-                                <div class="product-img image">
-                                    <img src="assets/img/products/6.png" alt="Product image">
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="buttons">
-                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <h4>Product Name Here</h4>
-                            <h5>$22.54</h5>
-                        </div>
-                        <div class="slider-item">
-                            <div class="image-design">
-                                <div class="product-img image">
-                                    <img src="assets/img/products/7.png" alt="Product image">
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="buttons">
-                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <h4>Product Name Here</h4>
-                            <h5>$22.54</h5>
-                        </div>
-                        <div class="slider-item">
-                            <div class="image-design">
-                                <div class="product-img image">
-                                    <img src="assets/img/products/8.png" alt="Product image">
-                                </div>
-                                <div class="image-overlay">
-                                    <div class="buttons">
-                                        <button class="me-2"><img src="assets/img/icon/cart.png" alt="cart"></button>
-                                        <button><img src="assets/img/icon/favourite.png" alt="favourite"></button>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <h4>Product Name Here</h4>
-                            <h5>$22.54</h5>
-                        </div>
+                        @empty
+                            <h6 class="text-danger">Nohting to show any prodicts !</h6>
+                        @endforelse
                     </div>
                 </div>
             </div>
